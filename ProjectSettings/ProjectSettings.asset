@@ -780,7 +780,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: THIRD_PERSON_CONTROLLER;ULTIMATE_CHARACTER_CONTROLLER_SHOOTER;ULTIMATE_CHARACTER_CONTROLLER_MELEE;ULTIMATE_CHARACTER_CONTROLLER_HDRP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
