@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieOpener : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private ObjectPool pool;
+    private Transform playerTransform;
 
-    // Update is called once per frame
-    void Update()
+    public void Open()
     {
-        
+        var zombie = pool.GetObject();
+        zombie.SetActive(true);
+        var agent = zombie.GetComponent<NavMeshAgent>();
+        agent.destination = playerTransform.position;
+    }
+    
+    public void SetPlayerTransform(Transform transform)
+    {
+        playerTransform = transform;
     }
 }

@@ -11,8 +11,9 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private List<GameObject> listExamples;
     [SerializeField] private Transform transformPool;
     [SerializeField] private int countExamplesForSpawn;
-    private List<GameObject> pool;
-    private Transform playerTransform;
+    
+    private List<GameObject> pool = new List<GameObject>();
+    
 
     public void Init()
     {
@@ -21,25 +22,22 @@ public class ObjectPool : MonoBehaviour
             for (int j = 0; j < listExamples.Count; j++)
             { 
             var example = Instantiate(listExamples[j], transformPool);
-            example.GetComponent<NavMeshAgent>().SetDestination(playerTransform.position);
+            pool.Add(example);
             example.SetActive(false);
             }
         }
     }
 
-    public void SetPlayerTransform(Transform transform)
+    public GameObject GetObject()
     {
-        playerTransform = transform;
-    }
-    
-    private GameObject GetObject()
-    {
-        var current = pool.FirstOrDefault(x => x.activeSelf == false);
-        if (current == null)
+        var findedObject = pool.FirstOrDefault(x => !x.activeSelf);
+        if (findedObject == null)
         {
-            current = Instantiate(listExamples[Random.Range(0, listExamples.Count)], transformPool);
+            var newObject = Instantiate(listExamples[Random.Range(0, listExamples.Count)], transformPool);
+            newObject.SetActive(false);
+            return newObject;
         }
 
-        return current;
+        return findedObject;
     }
 }

@@ -440,7 +440,8 @@ MonoBehaviour:
       m_ItemSubstateIndex: 0
       m_AudioClipSet:
         m_AudioConfig: {fileID: 0}
-        m_AudioClips: []
+        m_AudioClips:
+        - {fileID: 8300000, guid: 31722ee00fd6f0f4abf5d53d5170a3be, type: 3}
   m_UnequipEvent:
     m_WaitForAnimationEvent: 1
     m_Duration: 0.3
@@ -470,18 +471,19 @@ MonoBehaviour:
       m_ItemSubstateIndex: 0
       m_AudioClipSet:
         m_AudioConfig: {fileID: 0}
-        m_AudioClips: []
+        m_AudioClips:
+        - {fileID: 8300000, guid: ff9c757fd4c413b4baf272f1ae0740db, type: 3}
   m_UIMonitorID: 0
   m_Icon: {fileID: 21300090, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
   m_ShowCrosshairsOnAim: 1
-  m_CenterCrosshairs: {fileID: 0}
+  m_CenterCrosshairs: {fileID: 21300056, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
   m_QuadrantOffset: 5
   m_MaxQuadrantSpread: 10
   m_QuadrantSpreadDamping: 0.05
-  m_LeftCrosshairs: {fileID: 0}
-  m_TopCrosshairs: {fileID: 0}
-  m_RightCrosshairs: {fileID: 0}
-  m_BottomCrosshairs: {fileID: 0}
+  m_LeftCrosshairs: {fileID: 21300064, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
+  m_TopCrosshairs: {fileID: 21300058, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
+  m_RightCrosshairs: {fileID: 21300062, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
+  m_BottomCrosshairs: {fileID: 21300060, guid: 5fb67c614ba76ca45a811c8e1f7be476, type: 3}
   m_ShowFullScreenUI: 0
   m_FullScreenUIID: -1
   m_PickupItemEvent:
@@ -582,10 +584,11 @@ MonoBehaviour:
       m_ItemSubstateIndex: 2
       m_AudioClipSet:
         m_AudioConfig: {fileID: 0}
-        m_AudioClips: []
+        m_AudioClips:
+        - {fileID: 8300000, guid: cc144cd756a95044d87c06d7a7207e9a, type: 3}
   m_ConsumableItemDefinition: {fileID: 114399628520483710, guid: 5481010ef14c32f4cb7b6661b0c59fb4,
     type: 2}
-  m_FireMode: 1
+  m_FireMode: 0
   m_FireType: 0
   m_MinChargeLength: 0
   m_FullChargeLength: 0
@@ -599,31 +602,33 @@ MonoBehaviour:
   m_BurstDelay: 0.25
   m_Spread: 0.01
   m_FireInLookSourceDirection: 1
-  m_Projectile: {fileID: 0}
+  m_Projectile: {fileID: 13871096788097354, guid: 0ae19603d284a1b4794806117f84d7cf,
+    type: 3}
   m_ProjectileFireVelocityMagnitude: 10
   m_ProjectileVisibility: 0
   m_ProjectileStartLayer: 2
-  m_ProjectileFiredLayer: 28
+  m_ProjectileFiredLayer: 26
   m_LayerChangeDelay: 0.1
   m_ProjectileEnableDelayAfterOtherUse: 0.4
   m_DryFireItemSubstateParameterValue: 11
   m_DryFireAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 2d8e96ae38d893b428bfa05f45141e08, type: 3}
   m_HitscanFireDelay: 0
   m_HitscanFireRange: 3.4028235e+38
   m_MaxHitscanCollisionCount: 15
   m_ImpactLayers:
     serializedVersion: 2
-    m_Bits: 3758096345
+    m_Bits: 536870873
   m_HitscanTriggerInteraction: 1
   m_DamageProcessor: {fileID: 0}
-  m_DamageAmount: 10
+  m_DamageAmount: 20
   m_ImpactForce: 2
   m_ImpactForceFrames: 15
   m_ImpactStateName: 
   m_ImpactStateDisableTimer: 10
-  m_SurfaceImpact: {fileID: 0}
+  m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
   m_ClipSize: 50
   m_AutoReload: 3
   m_ReloadType: 0
@@ -650,7 +655,8 @@ MonoBehaviour:
       m_ItemSubstateIndex: 0
       m_AudioClipSet:
         m_AudioConfig: {fileID: 0}
-        m_AudioClips: []
+        m_AudioClips:
+        - {fileID: 8300000, guid: 2c7840cd69a940d488e857ffaeee1f73, type: 3}
   m_ReloadEvent:
     m_WaitForAnimationEvent: 1
     m_Duration: 0
@@ -2052,6 +2058,7 @@ GameObject:
   - component: {fileID: 3253063161155383834}
   - component: {fileID: 8499693356319383553}
   - component: {fileID: 5555292570962226044}
+  - component: {fileID: 7308343253670766605}
   m_Layer: 31
   m_Name: Nolan
   m_TagString: Player
@@ -2612,7 +2619,7 @@ MonoBehaviour:
     m_AudioConfig: {fileID: 0}
     m_AudioClips: []
   m_DeathAudioClipSet:
-    m_AudioConfig: {fileID: 0}
+    m_AudioConfig: {fileID: 11400000, guid: 1f7d5f7722af8a146a51b88fed510ae4, type: 2}
     m_AudioClips: []
   m_DamagePopupManagerID: -1
   m_OnDamageEvent:
@@ -2828,6 +2835,14 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!81 &7308343253670766605
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847623237318278249}
+  m_Enabled: 1
 --- !u!1 &6847623237318278251
 GameObject:
   m_ObjectHideFlags: 0

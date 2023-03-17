@@ -7,10 +7,14 @@ public class ObjectPoolUsing : MonoBehaviour
 {
     [SerializeField] private ObjectPool objectPool;
     [SerializeField] private PlayerFinder playerFinder;
+    [SerializeField] private ZombieOpener zombieOpener;
+    [SerializeField] private ActionOnTime actionOnTime;
 
     private void Start()
     {
-        objectPool.SetPlayerTransform(playerFinder.GetPlayerDestination());
+        zombieOpener.SetPlayerTransform(playerFinder.GetPlayerDestination());
         objectPool.Init();
+        actionOnTime.OnTimeAction += zombieOpener.Open;
+        actionOnTime.StartTimer();
     }
 }
