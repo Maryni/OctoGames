@@ -8,14 +8,25 @@ public class ZombieOpener : MonoBehaviour
     [SerializeField] private ObjectPool pool;
     private Transform playerTransform;
 
-    public void Open()
+    public void Open(bool isActiveObject = false)
     {
-        var zombie = pool.GetObject();
-        zombie.SetActive(true);
-        var agent = zombie.GetComponent<NavMeshAgent>();
-        agent.destination = playerTransform.position;
+        GameObject zombie;
+        if (!isActiveObject)
+        {
+            zombie = pool.GetObject();
+        }
+        else
+        {
+            zombie = pool.GetActiveObject();
+        }
+
+        if (zombie != null)
+        {
+            var agent = zombie.GetComponent<NavMeshAgent>();
+            agent.destination = playerTransform.position;
+        }
     }
-    
+
     public void SetPlayerTransform(Transform transform)
     {
         playerTransform = transform;

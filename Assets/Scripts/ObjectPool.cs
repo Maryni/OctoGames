@@ -13,7 +13,8 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private int countExamplesForSpawn;
     
     private List<GameObject> pool = new List<GameObject>();
-    
+    private List<GameObject> activePool = new List<GameObject>();
+
 
     public void Init()
     {
@@ -34,10 +35,17 @@ public class ObjectPool : MonoBehaviour
         if (findedObject == null)
         {
             var newObject = Instantiate(listExamples[Random.Range(0, listExamples.Count)], transformPool);
-            newObject.SetActive(false);
+            activePool.Add(newObject);
             return newObject;
         }
-
+        
+        findedObject.SetActive(true);
+        activePool.Add(findedObject);
         return findedObject;
+    }
+
+    public GameObject GetActiveObject()
+    {
+        return activePool.FirstOrDefault(x => x.activeSelf);
     }
 }

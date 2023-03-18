@@ -14,7 +14,9 @@ public class ObjectPoolUsing : MonoBehaviour
     {
         zombieOpener.SetPlayerTransform(playerFinder.GetPlayerDestination());
         objectPool.Init();
-        actionOnTime.OnTimeAction += zombieOpener.Open;
+        
+        actionOnTime.OnTimeAction += () => zombieOpener.Open();
+        actionOnTime.OnTimeQuicklyAction += () => zombieOpener.Open(true);
         actionOnTime.StartTimer();
     }
 }

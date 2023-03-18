@@ -2058,7 +2058,6 @@ GameObject:
   - component: {fileID: 3253063161155383834}
   - component: {fileID: 8499693356319383553}
   - component: {fileID: 5555292570962226044}
-  - component: {fileID: 7308343253670766605}
   m_Layer: 31
   m_Name: Nolan
   m_TagString: Player
@@ -2614,7 +2613,10 @@ MonoBehaviour:
     m_Bits: 0
   m_TakeDamageAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 1118c719972bbd648a48c79796e512eb, type: 3}
+    - {fileID: 8300000, guid: 1c8c339d77fb4084db7165f1af7882c9, type: 3}
+    - {fileID: 8300000, guid: 9100646839a4df740a0a42a2ffad3ac0, type: 3}
   m_HealAudioClipSet:
     m_AudioConfig: {fileID: 0}
     m_AudioClips: []
@@ -2835,14 +2837,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!81 &7308343253670766605
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6847623237318278249}
-  m_Enabled: 1
 --- !u!1 &6847623237318278251
 GameObject:
   m_ObjectHideFlags: 0
