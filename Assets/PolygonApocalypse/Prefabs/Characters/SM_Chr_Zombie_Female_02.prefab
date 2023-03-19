@@ -1369,6 +1369,8 @@ GameObject:
   - component: {fileID: 8414564942000109298}
   - component: {fileID: 4473324141288282251}
   - component: {fileID: 1686056380317113786}
+  - component: {fileID: 1986351885495489942}
+  - component: {fileID: 1504340067540789227}
   m_Layer: 26
   m_Name: SM_Chr_Zombie_Female_02
   m_TagString: Untagged
@@ -1585,6 +1587,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2, z: 0.5}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1986351885495489942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300917902799776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edb747ed7e479949a7c2bdbcbd3cc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDealDamage: {fileID: 1504340067540789227}
+  attributeManager: {fileID: 8414564942000109298}
+--- !u!114 &1504340067540789227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300917902799776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae272702a41776a4e993fc7276b4578c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  rateDamage: 1
 --- !u!1 &1307709796245304
 GameObject:
   m_ObjectHideFlags: 0

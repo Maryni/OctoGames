@@ -10,6 +10,18 @@ public class ObjectPoolUsing : MonoBehaviour
     [SerializeField] private ZombieOpener zombieOpener;
     [SerializeField] private ActionOnTime actionOnTime;
 
+
+    public void StopAll()
+    {
+        actionOnTime.StopAllCoroutines();
+        List<GameObject> actives = objectPool.GetAllActiveObjects();
+        foreach (GameObject localGameObject in actives)
+        {
+            localGameObject.GetComponent<EnemyController>().Stop();
+            localGameObject.SetActive(false);
+        }
+    }
+    
     private void Start()
     {
         zombieOpener.SetPlayerTransform(playerFinder.GetPlayerDestination());
@@ -19,4 +31,5 @@ public class ObjectPoolUsing : MonoBehaviour
         actionOnTime.OnTimeQuicklyAction += () => zombieOpener.Open(true);
         actionOnTime.StartTimer();
     }
+    
 }

@@ -14,6 +14,15 @@ public class EnemyDealDamage : MonoBehaviour
     private GameObject gameObjectWhoTakeDamage;
     private Coroutine takeDamageCoroutine;
     
+    public void StopDamageCoroutine()
+    {
+        if (takeDamageCoroutine!= null)
+        {
+            StopCoroutine(takeDamageCoroutine);
+            takeDamageCoroutine = null;
+        }
+    }
+    
     private void OnCollisionStay(Collision collisionInfo)
     {
         if (collisionInfo.gameObject.layer == 31)
@@ -49,12 +58,7 @@ public class EnemyDealDamage : MonoBehaviour
     {
         yield return rate;
         health.Damage(damage);
-        TakeDamage(rate, damage, health);
+        StopDamageCoroutine();
     }
-
-    private void StopDamageCoroutine()
-    {
-        StopCoroutine(takeDamageCoroutine);
-        takeDamageCoroutine = null;
-    }
+    
 }

@@ -7,6 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4868079674561661357}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Reload
+      objectReference: {fileID: 0}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EnemyController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 364206543, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1187010538823314, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
       propertyPath: m_Name
       value: SM_Chr_Zombie_Male_01
@@ -62,12 +90,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
+--- !u!114 &2299243488593690089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 364206544, guid: b87cb604b959698428935c5d56bd97c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2299243488236332089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300418367371492011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30da4fa96ed67145a2c5310eca67bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2300418367371492011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1187010538823314, guid: b87cb604b959698428935c5d56bd97c0,
     type: 3}
   m_PrefabInstance: {fileID: 2299243488236332089}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4868079674561661357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300418367371492011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edb747ed7e479949a7c2bdbcbd3cc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDealDamage: {fileID: 6482458114862968373}
+  attributeManager: {fileID: 2299243488593690089}
 --- !u!114 &6482458114862968373
 MonoBehaviour:
   m_ObjectHideFlags: 0

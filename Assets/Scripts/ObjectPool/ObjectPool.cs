@@ -15,7 +15,6 @@ public class ObjectPool : MonoBehaviour
     private List<GameObject> pool = new List<GameObject>();
     private List<GameObject> activePool = new List<GameObject>();
 
-
     public void Init()
     {
         for (int i = 0; i < countExamplesForSpawn; i++)
@@ -47,5 +46,10 @@ public class ObjectPool : MonoBehaviour
     public GameObject GetActiveObject()
     {
         return activePool.FirstOrDefault(x => x.activeSelf);
+    }
+
+    public List<GameObject> GetAllActiveObjects()
+    {
+        return activePool;
     }
 }
